@@ -1,5 +1,5 @@
 <?php
-require_once 'Database.php';
+require_once 'database.php';
 
 class Usuario {
     private $conn;
@@ -60,4 +60,5 @@ class Usuario {
         return $stmt->execute();
     }
 }
+
 ?>
