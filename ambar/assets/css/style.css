@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f2f5;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+}
+
+.hero-section {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('../img/hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 100px 0;
+    border-bottom: 5px solid #ffc107;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.hero-section h1 {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.card {
+    transition: transform 0.2s, box-shadow 0.2s;
+    border-radius: 12px;
+    overflow: hidden;
+    border: none !important;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1) !important;
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+.row.p-3.bg-light.rounded.border {
+    background-color: #ffffff !important;
+    border-radius: 10px !important;
+}
+
+.badge {
+    font-weight: 600;
+    padding: 0.5em 0.8em;
+    font-size: 0.85em;
+    margin-right: 5px;
+}
+
+.badge.bg-herbivoro { background-color: #28a745 !important; }
+.badge.bg-carnivoro { background-color: #dc3545 !important; }
+.badge.bg-onivoro { background-color: #ffc107 !important; color: #333 !important;}
+.badge.bg-cretaceo { background-color: #007bff !important; }
+.badge.bg-jurassico { background-color: #17a2b8 !important; }
+.badge.bg-triassico { background-color: #6f42c1 !important; }
+
+.card-title.text-warning {
+    color: #ffc107 !important;
+    border-bottom: 2px solid #ffc107;
+    padding-bottom: 5px;
+    display: inline-block;
+}
+
+footer {
+    background-color: #343a40 !important;
+    color: #f8f9fa;
+    border-top: 3px solid #ffc107;
+    font-size: 0.9rem;
+}
+
+footer p {
+    margin-bottom: 0;
+}
+
+.timeline {
+    /* border-top: 5px solid #ffc107; (REMOVIDO DAQUI) */
+    margin-top: 30px;
+    padding-top: 0;
+    position: relative; /* Adiciona posição relativa para desenhar o pseudo-elemento */
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 55px; /* Define a altura da linha */
+    left: 0;
+    right: 0;
+    height: 5px;
+    background-color: #ffc107; /* Cor âmbar */
+    z-index: 1; /* Garante que fique abaixo dos pontos circulares */
+}
+
+.timeline-period {
+    position: relative;
+    text-align: center;
+    padding-top: 80px; /* Aumenta o espaço para o título */
+    z-index: 10; /* Garante que os títulos fiquem acima da linha */
+}
+
+.timeline-period::before {
+    content: '';
+    position: absolute;
+    top: 50px; /* Alinha o centro do círculo com a linha horizontal (55px - 5px do raio) */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20px;
+    height: 20px;
+    background-color: #ffc107;
+    border-radius: 50%;
+    border: 4px solid #fff;
+    z-index: 11;
+    box-shadow: 0 0 0 2px #ffc107;
+}
+
+.dino-card-list {
+    position: relative;
+    padding-top: 40px; 
+}
+.dino-card-list::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 2px;
+    height: 30px;
+    background-color: #ffc107;
+    z-index: 5;
+    transform: translateX(-50%);
+}
