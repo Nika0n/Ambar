@@ -1,5 +1,5 @@
 <?php
-require_once 'Database.php';
+require_once 'database.php';
 
 class Dinossauro {
     private $conn;
@@ -120,4 +120,5 @@ class Dinossauro {
         return null;
     }
 }
+
 ?>
